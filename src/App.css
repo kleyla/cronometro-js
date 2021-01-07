@@ -1,38 +1,84 @@
-.App {
-  text-align: center;
+body {
+  background: var(--bg);
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+:root {
+  --one: #00aba9;
+  --two: #c85454;
+  --three: #ffc900;
+  --bg: #100c08;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.main-section {
+  background: transparent;
+  width: 100vw;
+  height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.clock-holder {
+  max-width: 600px;
+  width: 500px;
+  background: #fff;
+  margin: auto;
+  position: relative;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.stopwatch {
+  padding: 60px 0px;
+  text-align: center;
+}
+.stopwatch span {
+  background: var(--one);
+  color: #fff;
+  display: inline-block;
+  font-family: monospace;
+  font-size: 22px;
+  padding: 20px;
+  border-radius: 5px;
+  width: 70px;
+}
+.stopwatch .stopwatch-btn {
+  background: #fff;
+  margin-top: 30px;
+  margin-left: 5px;
+  border: none;
+  padding: 12px 20px;
+  font-size: 16px;
+  text-transform: uppercase;
+  width: 150px;
+  transition: background 1s;
+  cursor: pointer;
+}
+.stopwatch .stopwatch-btn-red {
+  border: 2px solid var(--two);
+  color: var(--two);
+}
+.stopwatch .stopwatch-btn-yel {
+  border: 2px solidvar(--three);
+  color: var(--three);
+}
+.stopwatch .stopwatch-btn-gre {
+  border: 2px solid var(--one);
+  color: var(--one);
+}
+.stopwatch .stopwatch-btn-red:hover {
+  background: var(--two);
+  border: 2px solid var(--two);
+  color: #fff;
+}
+.stopwatch .stopwatch-btn-yel:hover {
+  background: var(--three);
+  border: 2px solidvar(--three);
+  color: #fff;
+}
+.stopwatch .stopwatch-btn-gre:hover {
+  background: var(--one);
+  border: 2px solid var(--one);
+  color: #fff;
 }
